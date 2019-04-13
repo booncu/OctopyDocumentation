@@ -21,17 +21,18 @@ class HomeSplash extends React.Component {
     const langPart = `${language ? `${language}/` : ''}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
+    const Logo = props => (
+      <div className="projectLogo">
+        <img src={props.img_src} alt="Project Logo" />
+      </div>
+    );
+
+
     const SplashContainer = props => (
       <div className="homeContainer">
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
-      </div>
-    );
-
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
       </div>
     );
 
@@ -65,6 +66,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
             <Button href="https://github.com/SupianIDz/OctopyFramework" target="_blank">Try It Out</Button>
+            <Button href={`${baseUrl}docs/installation`} target="_blank">Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>

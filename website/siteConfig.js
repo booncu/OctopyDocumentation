@@ -42,6 +42,8 @@ const siteConfig = {
         { search: true }
     ],
 
+    docsSideNavCollapsible: true,
+
     // If you have users set above, you add it here:
     users,
 
@@ -61,9 +63,6 @@ const siteConfig = {
         primaryColor: '#0C1021',
         secondaryColor: '#205C3B',
     },
-    stylesheets: [
-        "https://fonts.googleapis.com/css?family=Nunito",
-    ],
 
     /* Custom fonts for website */
     /*
@@ -82,16 +81,27 @@ const siteConfig = {
     // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
     copyright: `Copyright © 2018 - ${new Date().getFullYear()} Supian M`,
 
+    scrollToTop: true,
+
     highlight: {
         // Highlight.js theme to use for syntax highlighting in code blocks.
         theme: 'atom-one-dark',
     },
 
     // Add custom scripts here that would be placed in <script> tags.
-    scripts: ['https://buttons.github.io/buttons.js'],
+    scripts: [
+        'https://buttons.github.io/buttons.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+        '/js/code-block-buttons.js',
+    ],
+    stylesheets: [
+        'https://fonts.googleapis.com/css?family=Nunito',
+        '/css/code-block-buttons.css',
+    ],
 
     // On page navigation for the current documentation page.
     onPageNav: 'separate',
+
     // No .html extensions for paths.
     cleanUrl: true,
 

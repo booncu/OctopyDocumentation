@@ -1,52 +1,81 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
-}
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
 
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) {}
 
-@media only screen and (max-width: 1023px) {
-}
+@media only screen and (max-width: 1023px) {}
 
-@media only screen and (min-width: 1400px) {
-}
+@media only screen and (min-width: 1400px) {}
 
-@media only screen and (min-width: 1500px) {
-}
+@media only screen and (min-width: 1500px) {}
 
 code {
-	width: 100%;
-	font-size: 80%;
-	border-radius: 0px;
-	padding: 2px;
-	color: #56A0BF;
+    width: 100%;
+    font-size: 80%;
+    padding: 2px 4px 2px 4px;
+    /*color: #56A0BF;*/
+    border-radius: 0px;
+
 }
 
-body {	
-	font-family: Nunito, sans-serif;
+body {
+    font-family: Nunito, sans-serif;
 }
 
-.homeSplashFade{
-	background-color: #0C1021;
+.homeSplashFade {
+    background-color: #0C1021;
+    min-height: 350px;
 }
 
-.buttonWrapper > a.button {
- 	background-color: #5ab3b3;
- 	border-radius: 5px;
- 	color: #0C1021;
- 	font-size: 16px;
- 	font-weight: 600;
+.buttonWrapper>a.button {
+    border-radius: 0px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1.5px solid #5ab3b3;
 }
 
-.buttonWrapper > a.button:hover {
-	background-color: #5ab3b3;
-	border-radius: 5px;
-	color: #FFFFFF;
- 	font-size: 16px;
- 	font-weight: 600;
+.buttonWrapper>a.button:hover {
+    background-color: #5ab3b3;
+    border-radius: 0px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .projectTitle {
-	color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.homeContainer .homeWrapper .projectLogo {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.homeContainer .homeWrapper .projectLogo img {
+    height: 150px;
+}
+
+.hljs {
+	background-color: #0C1021;
+}
+
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
 }

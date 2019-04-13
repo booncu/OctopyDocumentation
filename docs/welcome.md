@@ -1,7 +1,7 @@
 ---
 id: welcome
-title: About
-sidebar_label: About
+title: About Octopy Framework
+sidebar_label: About Octopy
 ---
 
 Octopy is a lightweight PHP web framework inspired by Laravel framework and its use is almost like Laravel. For people who build web sites using PHP. Its goal is to enable you to develop projects much faster than you could if you were writing code from scratch, by providing a rich set of libraries for commonly needed tasks, as well as a simple interface and logical structure to access these libraries. Octopy lets you creatively focus on your project by minimizing the amount of code needed for a given task.

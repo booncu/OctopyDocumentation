@@ -14,22 +14,28 @@ The Octopy framework has a few system requirements. You will need to make sure y
 * JSON PHP Extension
 
 ## Installing Octopy
-Octopy utilizes Composer to manage its dependencies. So, before using Octopy, make sure you have Composer installed on your machine.
+Before using Octopy, make sure you have composer or git installed on your machine.
 
 ### Via Composer
 You can install Octopy by issuing the composer create-project command in your terminal:
 
-`composer create-project supianidz/octopyframework OctopyFramework dev-master`
+```
+composer create-project supianidz/octopyframework OctopyFramework dev-master
+```
 
 ### Via GIT
 Alternatively, you may also install Octopy by clone Octopy from our repository:
 
-`git clone https://github.com/SupianIDz/OctopyFramework.git`
+```
+git clone https://github.com/SupianIDz/OctopyFramework.git
+```
 
 ### Local Development Server
 If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Octopy command. This command will start a development server at http://localhost:1337:
 
-`php octopy serve`
+```
+php octopy serve
+```
 
 ## Configuration
 ### Public Directory
@@ -42,7 +48,7 @@ All of the configuration files for the Octopy framework are stored in the config
 
 ### Directory Permissions
 
-After installing Octopy, you may need to configure some permissions. Directories within the storage and the bootstrap/cache directories should be writable by your web server or Octopy will not run. If you are using the Homestead virtual machine, these permissions should already be set.
+After installing Octopy, you may need to configure some permissions. Directories within the storage directories should be writable by your web server or Octopy will not run.
 
 ### Application Key
 
@@ -62,7 +68,7 @@ Octopy includes a public/.htaccess file that is used to provide URLs without the
 
 If the .htaccess file that ships with Octopy does not work with your Apache installation, try this alternative:
 
-```
+```apache
 # ----------------------------------------------------------------------
 # UTF-8 encoding
 # ----------------------------------------------------------------------
@@ -104,7 +110,7 @@ AddDefaultCharset utf-8
 
 If you are using Nginx, the following directive in your site configuration will direct all requests to the index.php front controller:
 
-```
+```nginx
 location / {
     try_files $uri $uri/ /index.php?$query_string;
 }

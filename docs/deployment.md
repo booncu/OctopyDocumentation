@@ -56,7 +56,9 @@ server {
 
 When deploying to production, make sure that you are optimizing Composer's class autoloader map so Composer can quickly find the proper file to load for a given class:
 
-`composer install --optimize-autoloader --no-dev`
+```
+composer create-project install --optimize-autoloader --no-dev
+```
 
 > In addition to optimizing the autoloader, you should always be sure to include a `composer.lock` file in your project's source control repository. Your project's dependencies can be installed much faster when a `composer.lock` file is present.
 
@@ -64,7 +66,9 @@ When deploying to production, make sure that you are optimizing Composer's class
 
 When deploying your application to production, you should make sure that you run the `config:cache` Octopy command during your deployment process:
 
-`php octopy optimize`
+```
+php octopy optimize
+```
 
 This command will combine all of Octopy's configuration files into a single, cached file, which greatly reduces the number of trips the framework must make to the filesystem when loading your configuration values.
 
@@ -74,7 +78,9 @@ This command will combine all of Octopy's configuration files into a single, cac
 
 If you are building a large application with many routes, you should make sure that you are running the `route:cache` Octopy command during your deployment process:
 
-`php octopy route:cache`
+```
+php octopy route:cache
+```
 
 This command reduces all of your route registrations into a single method call within a cached file, improving the performance of route registration when registering hundreds of routes.
 
