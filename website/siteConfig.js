@@ -9,14 +9,7 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
-const users = [{
-    caption: 'SupianIDz',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/octopy.svg'.
-    image: '/img/octopy.svg',
-    infoLink: 'https://www.facebook.com/SupianIDz',
-    pinned: true,
-}, ];
+const users = require('./data/users');
 
 const siteConfig = {
     title: 'Octopy Framework', // Title for your website.
@@ -39,6 +32,7 @@ const siteConfig = {
         { doc: 'installation', label: 'Documentation' },
         { page: 'help', label: 'Help' },
         { blog: true, label: 'Blog' },
+        { href: 'https://github.com/SupianIDz/OctopyFramework', label: 'GitHub' },
         { search: true }
     ],
 
@@ -117,7 +111,7 @@ const siteConfig = {
 
     // You may provide arbitrary config keys to be used as needed by your
     // template. For example, if you need your repo's URL...
-    repoUrl: 'https://github.com/SupianIDz/OctopyFramework',
+    repoUrl: 'https://github.com/SupianIDz/OctopyDocumentation',
 };
 
 module.exports = siteConfig;

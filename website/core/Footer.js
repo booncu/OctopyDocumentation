@@ -72,7 +72,7 @@ class Footer extends React.Component {
             <a href={`${this.props.config.url}`}>GitHub</a>
             <a
               className="github-button"
-              href={this.props.config.repoUrl}
+              href={this.props.config.url}
               data-icon="octicon-star"
               data-count-href="/SupianIDz/OctopyFramework/stargazers"
               data-show-count="true"

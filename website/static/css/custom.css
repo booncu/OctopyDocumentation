@@ -14,7 +14,7 @@ code {
     width: 100%;
     font-size: 80%;
     padding: 2px 4px 2px 4px;
-    /*color: #56A0BF;*/
+    color: #F66A5A;
     border-radius: 0px;
 
 }
@@ -26,6 +26,11 @@ body {
 .homeSplashFade {
     background-color: #0C1021;
     min-height: 350px;
+}
+
+p > a {
+    color: #F66A5A;
+    text-decoration: none;
 }
 
 .buttonWrapper>a.button {

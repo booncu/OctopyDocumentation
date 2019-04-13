@@ -145,17 +145,23 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/octopy.svg`,
+            content: 'Value elegance, simplicity, and readability? You’ll fit right in. Octopy is designed for people just like you. If you need help getting started, check out our great documentation.',
+            image: `${baseUrl}img/coding.svg`,
             imageAlign: 'top',
-            title: 'Feature One',
+            title: 'Expressive, Beautiful Syntax',
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/octopy.svg`,
+            content: 'Octopy is designed without dependency on other packages. But you are free to use packages from outside using composer.',
+            image: `${baseUrl}img/bin.svg`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            title: 'Zero Dependencies',
           },
+          {
+            content: 'Whether you’re a solo developer or a 20 person team, Octopy is a breath of fresh air. Keep everyone in sync using Octopy’s database agnostic migrations and schema builder.',
+            image: `${baseUrl}img/notebook.svg`,
+            imageAlign: 'top',
+            title: 'Designed For Your Team',
+          }
         ]}
       </Block>
     );
