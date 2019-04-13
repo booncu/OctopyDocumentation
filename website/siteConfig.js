@@ -61,6 +61,9 @@ const siteConfig = {
         primaryColor: '#0C1021',
         secondaryColor: '#205C3B',
     },
+    stylesheets: [
+        "https://fonts.googleapis.com/css?family=Nunito",
+    ],
 
     /* Custom fonts for website */
     /*
@@ -77,7 +80,7 @@ const siteConfig = {
     */
 
     // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-    copyright: `Copyright © ${new Date().getFullYear()} Supian M`,
+    copyright: `Copyright © 2018 - ${new Date().getFullYear()} Supian M`,
 
     highlight: {
         // Highlight.js theme to use for syntax highlighting in code blocks.

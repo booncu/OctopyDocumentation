@@ -22,3 +22,29 @@ code {
 	padding: 2px;
 	color: #56A0BF;
 }
+
+body {	
+	font-family: Nunito, sans-serif;
+}
+
+.homeSplashFade{
+	background-color: #0C1021;
+}
+
+a.button {
+ 	background-color: #5ab3b3;
+ 	color: #0C1021;
+ 	font-size: 16px;
+ 	font-weight: 600;
+}
+
+a.button:hover {
+	background-color: #5ab3b3;
+	color: #FFFFFF;
+ 	font-size: 16px;
+ 	font-weight: 600;
+}
+
+.projectTitle {
+	color: #FFFFFF;
+}
