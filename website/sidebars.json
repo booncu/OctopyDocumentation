@@ -1,5 +1,6 @@
 {
   "docs": {
+  	"Welcome to Octopy": ["welcome", "license"],
     "Getting Started": ["installation", "configuration", "structure", "deployment"]
   },
   "docs-other": {}

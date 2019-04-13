@@ -4,24 +4,12 @@ title: Deployment
 sidebar_label: Deployment
 ---
 
-- [Introduction](#introduction)
-- [Server Configuration](#server-configuration)
-    - [Nginx](#nginx)
-- [Optimization](#optimization)
-    - [Autoloader Optimization](#autoloader-optimization)
-    - [Optimizing Configuration Loading](#optimizing-configuration-loading)
-    - [Optimizing Route Loading](#optimizing-route-loading)
-- [Deploying With Forge](#deploying-with-forge)
-
-<a name="introduction"></a>
 ## Introduction
 
 When you're ready to deploy your Octopy application to production, there are some important things you can do to make sure your application is running as efficiently as possible. In this document, we'll cover some great starting points for making sure your Octopy application is deployed properly.
 
-<a name="server-configuration"></a>
 ## Server Configuration
 
-<a name="nginx"></a>
 ### Nginx
 
 If you are deploying your application to a server that is running Nginx, you may use the following configuration file as a starting point for configuring your web server. Most likely, this file will need to be customized depending on your server's configuration.
@@ -62,10 +50,8 @@ server {
 ```
     
 
-<a name="optimization"></a>
 ## Optimization
 
-<a name="autoloader-optimization"></a>
 ### Autoloader Optimization
 
 When deploying to production, make sure that you are optimizing Composer's class autoloader map so Composer can quickly find the proper file to load for a given class:
@@ -74,7 +60,6 @@ When deploying to production, make sure that you are optimizing Composer's class
 
 > In addition to optimizing the autoloader, you should always be sure to include a `composer.lock` file in your project's source control repository. Your project's dependencies can be installed much faster when a `composer.lock` file is present.
 
-<a name="optimizing-configuration-loading"></a>
 ### Optimizing Configuration Loading
 
 When deploying your application to production, you should make sure that you run the `config:cache` Octopy command during your deployment process:
@@ -85,7 +70,6 @@ This command will combine all of Octopy's configuration files into a single, cac
 
 > If you execute the `config:cache` command during your deployment process, you should be sure that you are only calling the `env` function from within your configuration files. Once the configuration has been cached, the `.env` file will not be loaded and all calls to the `env` function will return `null`.
 
-<a name="optimizing-route-loading"></a>
 ### Optimizing Route Loading
 
 If you are building a large application with many routes, you should make sure that you are running the `route:cache` Octopy command during your deployment process:

@@ -31,15 +31,17 @@ body {
 	background-color: #0C1021;
 }
 
-a.button {
+.buttonWrapper > a.button {
  	background-color: #5ab3b3;
+ 	border-radius: 5px;
  	color: #0C1021;
  	font-size: 16px;
  	font-weight: 600;
 }
 
-a.button:hover {
+.buttonWrapper > a.button:hover {
 	background-color: #5ab3b3;
+	border-radius: 5px;
 	color: #FFFFFF;
  	font-size: 16px;
  	font-weight: 600;
