@@ -20,7 +20,7 @@ code {
 }
 
 body {
-    font-family: Nunito, sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .homeSplashFade {
@@ -34,6 +34,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     border: 1.5px solid #5ab3b3;
+    letter-spacing: 2px;
 }
 
 .buttonWrapper>a.button:hover {
