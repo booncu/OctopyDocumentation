@@ -17,4 +17,8 @@
 
 code {
 	width: 100%;
+	font-size: 80%;
+	border-radius: 0px;
+	padding: 2px;
+	color: #56A0BF;
 }
