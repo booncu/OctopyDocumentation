@@ -45,7 +45,7 @@ The `Config` directory, as the name implies, contains all of your application's 
 
 ### The Console Directory
 
-The `Console` directory contains all of the custom Octopy commands for your application. These commands may be generated using the `octopy make:command` command. This directory also houses your console kernel, which is where your custom Octopy commands are registered and your [scheduled tasks](/docs/{{version}}/scheduling) are defined.
+The `Console` directory contains all of the custom Octopy commands for your application. These commands may be generated using the `octopy make:command` command. This directory also houses your console kernel, which is where your custom Octopy commands are registered and your [scheduled tasks](/docs/scheduling) are defined.
 
 ### The Database Directory
 

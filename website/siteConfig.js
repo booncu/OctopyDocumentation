@@ -20,7 +20,7 @@ const siteConfig = {
     url: 'https://github.com/SupianIDz/OctopyFramework',
     editUrl: 'https://github.com/SupianIDz/OctopyDocumentation/edit/master/docs/',
     //   baseUrl: '/test-site/',
-
+    usePrism: true,
     // Used for publishing and more
     projectName: 'OctopyFramework',
     organizationName: 'SupianIDz',

@@ -68,7 +68,7 @@ Octopy includes a public/.htaccess file that is used to provide URLs without the
 
 If the .htaccess file that ships with Octopy does not work with your Apache installation, try this alternative:
 
-```apache
+```
 # ----------------------------------------------------------------------
 # UTF-8 encoding
 # ----------------------------------------------------------------------

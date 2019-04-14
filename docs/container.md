@@ -15,22 +15,22 @@ Let's look at a simple example:
 
 namespace App\HTTP\Controller;
 
+use App\DB\Repository;
+use App\HTTP\Controller;
 use Octopy\HTTP\Response;
-use Octopy\HTTP\Controller;
-use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
     /**
-     * @var UserRepository
+     * @var Repository
      */
     protected $users;
 
     /**
-     * @param  UserRepository $users
+     * @param  Repository $users
      * @return void
      */
-    public function __construct(UserRepository $users)
+    public function __construct(Repository $users)
     {
         $this->users = $users;
     }
@@ -50,7 +50,7 @@ class UserController extends Controller
 
 ```
 
-In this example, the `UserController` needs to retrieve users from a data source. So, we will **inject** a service that is able to retrieve users. In this context, our `UserRepository` most likely extending with model to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily "mock", or create a dummy implementation of the `UserRepository` when testing our application.
+In this example, the `UserController` needs to retrieve users from a data source. So, we will **inject** a service that is able to retrieve users. In this context, our `Repository` most likely extending with model to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily "mock", or create a dummy implementation of the `Repository` when testing our application.
 
 A deep understanding of the Octopy service container is essential to building a powerful, large application, as well as for contributing to the Octopy core itself.
 
@@ -101,23 +101,23 @@ For example, you may type-hint a repository defined by your application in a con
 
 namespace App\HTTP\Controller;
 
+use App\DB\Repository;
+use App\HTTP\Controller;
 use Octopy\HTTP\Request;
 use Octopy\HTTP\Response;
-use Octopy\HTTP\Controller;
-use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
     /**
-     * @var UserRepository
+     * @var Repository
      */
     protected $users;
 
     /**
-     * @param  UserRepository $users
+     * @param  Repository $users
      * @return void
      */
-    public function __construct(UserRepository $users)
+    public function __construct(Repository $users)
     {
         $this->users = $users;
     }

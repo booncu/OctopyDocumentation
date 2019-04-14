@@ -19,9 +19,9 @@ Below is an example of a basic controller class. Note that the controller extend
 
 namespace App\HTTP\Controller;
 
+use App\DB\Repository;
+use App\HTTP\Controller;
 use Octopy\HTTP\Response;
-use Octopy\HTTP\Controller;
-use Octopy\DB\UserRepository;
 
 class UserController extends Controller
 {
@@ -32,7 +32,7 @@ class UserController extends Controller
      */
     public function show(Response $response, int $id)
     {
-    	$user = UserRepository::where('id', $id)->first();
+    	$user = Repository::where('id', $id)->first();
 
         return $response->view('user.profile', [
         	'user' => $user
@@ -70,8 +70,8 @@ If you would like to define a controller that only handles a single action, you 
 
 namespace App\HTTP\Controller;
 
+use App\DB\Repository;
 use App\HTTP\Controller;
-use App\DB\UserRepository;
 
 class ShowProfile extends Controller
 {
@@ -81,7 +81,7 @@ class ShowProfile extends Controller
      */
     public function __invoke($id)
     {
-    	$user = UserRepository::where('id', $id)->first();
+    	$user = Repository::where('id', $id)->first();
 
         return view('user.profile', [
         	'user' => $user
@@ -100,7 +100,9 @@ $this->get('user/:id', 'ShowProfile');
 
 [Middleware](/docs/middleware) may be assigned to the controller's routes in your route files:
 
-    $this->get('profile', 'UserController@show')->middleware('auth');
+```php
+$this->get('profile', 'UserController@show')->middleware('auth');
+```
 
 However, it is more convenient to specify middleware within your controller's constructor. Using the `middleware` method from your controller's constructor, you may easily assign middleware to the controller's action. You may even restrict the middleware to only certain methods on the controller class:
 
@@ -109,8 +111,8 @@ However, it is more convenient to specify middleware within your controller's co
 
 namespace App\HTTP\Controller;
 
+use App\DB\Repository;
 use App\HTTP\Controller;
-use App\DB\UserRepository;
 
 class ShowProfile extends Controller
 {
@@ -150,21 +152,21 @@ The Octopy [service container](/docs/container) is used to resolve all Octopy co
 
 namespace App\HTTP\Controller;
 
-use Octopy\HTTP\Controller;
-use App\Repositories\UserRepository;
+use App\HTTP\Controller;
+use App\DB\Repository;
 
 class UserController extends Controller
 {
     /**
-     * @var App\Repositories\UserRepository
+     * @var App\DB\Repository
      */
     protected $users;
 
     /**
-     * @param  UserRepository $users
+     * @param  Repository $users
      * @return void
      */
-    public function __construct(UserRepository $users)
+    public function __construct(Repository $users)
     {
         $this->users = $users;
     }
@@ -177,31 +179,31 @@ You may also type-hint any class. If the container can resolve it, you can type-
 
 In addition to constructor injection, you may also type-hint dependencies on your controller's methods. A common use-case for method injection is injecting the `Octopy\HTTP\Request` instance into your controller methods:
 
-    <?php
+```php
+<?php
 
-    namespace App\HTTP\Controller;
+namespace App\HTTP\Controller;
 
-    use Octopy\HTTP\Request;
+use Octopy\HTTP\Request;
 
-    class UserController extends Controller
+class UserController extends Controller
+{
+    /**
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
     {
-        /**
-         * Store a new user.
-         *
-         * @param  Request  $request
-         * @return Response
-         */
-        public function store(Request $request)
-        {
-            $name = $request->name;
-
-            //
-        }
+        $name = $request->name;
     }
+}
+```
 
 If your controller method is also expecting input from a route parameter, list your route arguments after your other dependencies. For example, if your route is defined like so:
 
-    Route::put('user/{id}', 'UserController@update');
+```php
+$this->post('user/:id', 'UserController@update');
+```
 
 You may still type-hint the `Octopy\HTTP\Request` and access your `id` parameter by defining your controller method as follows:
 
