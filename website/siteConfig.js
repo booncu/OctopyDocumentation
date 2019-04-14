@@ -18,6 +18,7 @@ const siteConfig = {
     baseUrl: '/', // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     url: 'https://github.com/SupianIDz/OctopyFramework',
+    editUrl: 'https://github.com/SupianIDz/OctopyDocumentation/edit/master/docs/',
     //   baseUrl: '/test-site/',
 
     // Used for publishing and more
@@ -26,10 +27,11 @@ const siteConfig = {
     // For top-level user or org sites, the organization is still the same.
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
     //   organizationName: 'JoelMarcey'
+    twitterUsername: 'SupianIDz',
 
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
-        { doc: 'installation', label: 'Documentation' },
+        { doc: 'welcome', label: 'Documentation' },
         { page: 'help', label: 'Help' },
         { blog: true, label: 'Blog' },
         { href: 'https://github.com/SupianIDz/OctopyFramework', label: 'GitHub' },
@@ -86,11 +88,11 @@ const siteConfig = {
     scripts: [
         'https://buttons.github.io/buttons.js',
         'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-        '/js/code-block-buttons.js',
+        '/js/block.js',
     ],
     stylesheets: [
         'https://fonts.googleapis.com/css?family=Nunito',
-        '/css/code-block-buttons.css',
+        '/css/block.css',
     ],
 
     // On page navigation for the current documentation page.

@@ -1,7 +1,9 @@
 {
   "docs": {
   	"Prologue": ["welcome", "contributions", "license"],
-    "Getting Started": ["installation", "configuration", "structure", "deployment"]
+    "Getting Started": ["installation", "configuration", "structure", "deployment"],
+    "Architecture": ["lifecycle", "container"],
+    "The Basics": ["routing", "middleware", "csrfprotection", "controllers"]
   },
   "docs-other": {}
 }

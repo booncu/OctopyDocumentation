@@ -33,17 +33,18 @@ p > a {
     text-decoration: none;
 }
 
-.buttonWrapper>a.button {
+.buttonWrapper > a.button {
     border-radius: 0px;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 600;
-    border: 1.5px solid #5ab3b3;
+    border: 1.5px solid #48C8EF;
     letter-spacing: 2px;
+    margin: 0px 5px 0px 5px;
 }
 
-.buttonWrapper>a.button:hover {
-    background-color: #5ab3b3;
+.buttonWrapper > a.button:hover {
+    background-color: #48C8EF;
     border-radius: 0px;
     color: #FFFFFF;
     font-size: 16px;

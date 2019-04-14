@@ -16,7 +16,7 @@ Remember, bug reports are created in the hope that others with the same problem 
 
 You may propose new features or improvements of existing Octopy behavior in the Octopy Ideas [issue board](https://github.com/laravel/ideas/issues). If you propose a new feature, please be willing to implement at least some of the code that would be needed to complete the feature.
 
-## Security Vulnerabilities
+## Security Vulnerability
 
 If you discover a security vulnerability within Octopy, please send an email to Supian M at <a href="mailto:supianidz@gmail.com">supianidz@gmail.com</a>. All security vulnerabilities will be promptly addressed.
 
@@ -26,7 +26,7 @@ Octopy follows the [PSR-2](https://github.com/php-fig/fig-standards/blob/master/
 
 ### PHPDoc
 
-Below is an example of a valid Octopy documentation block. Note that the `@param` attribute is followed by two spaces, the argument type, two more spaces, and finally the variable name:
+Below is an example of a valid Octopy documentation block by our style. Note that the `@param` attribute is followed by two spaces, the argument type and finally the variable name, variable must be parallel with other variables:
 
 ```php
 /**

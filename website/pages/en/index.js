@@ -16,7 +16,7 @@ const GridBlock = CompLibrary.GridBlock;
 class HomeSplash extends React.Component {
   render() {
     const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
+    const {baseUrl, docsUrl, url} = siteConfig;
     const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
     const langPart = `${language ? `${language}/` : ''}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
@@ -65,7 +65,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="https://github.com/SupianIDz/OctopyFramework" target="_blank">Try It Out</Button>
+            <Button href={`${url}`} target="_blank">Try It Out</Button>
             <Button href={`${baseUrl}docs/installation`} target="_blank">Get Started</Button>
           </PromoSection>
         </div>
